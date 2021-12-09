@@ -9,6 +9,8 @@
     "test": "./node_modules/.bin/mocha test"
   },
   "dependencies": {
+    "@sentry/node": "^6.16.0",
+    "@sentry/tracing": "^6.16.0",
     "bluebird": "3.7.2",
     "chai": "4.2.0",
     "chai-http": "4.3.0",

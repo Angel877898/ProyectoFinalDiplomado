@@ -62,6 +62,7 @@ describe('payment check', () => {
         }, 500);
     });
 
+
     it('Should return 5 promo codes', done => {
         chai.request(server)
             .get('/payment/promos')
