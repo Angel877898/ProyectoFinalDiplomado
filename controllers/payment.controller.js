@@ -5,8 +5,10 @@ const LINE_ENDING = require('os').EOL;
 
 module.exports = {
     create: function (req, res) {
-        const fd = fs.openSync(PAYMENT_FILE_PATH, 'a');
-        fs.appendFileSync(fd, faker.commerce.price() + LINE_ENDING, 'utf8');
+        var price = faker.commerce.price();
+        var stream = fs.createWriteStream(PAYMENT_FILE_PATH, { flags: "a" });
+        stream.write(price + LINE_ENDING);
+        stream.end();
         res.status(201).send();
     },
 

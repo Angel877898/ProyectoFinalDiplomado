@@ -7,7 +7,7 @@ module.exports = {
     changeStatus: function (req, res) {
         //Debera de retornar una dirección random
         // codigo de respuesta 201
-        // data la direcciòn random
+        // data la direcciòn random4w
         res.json({addres: ""});
     },
 };

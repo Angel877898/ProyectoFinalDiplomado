@@ -14,7 +14,7 @@
 * Se debe de desplegar a Heroku mediante Github actios solo si los tests son aprobatorios
 * Implementar Git-flow
 * Implementar Pull Request a Main donde ejecute test
-* All realizar push a main esta debe de desplegarse a Heroku
+* Al realizar push a main esta debe de desplegarse a Heroku
 * Todos los test deben de cumplirse correctamente
 * corregir y detectar errores en el proyecto
 * Implementar Sentry
