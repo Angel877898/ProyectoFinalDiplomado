@@ -6,15 +6,14 @@ const LINE_ENDING = require('os').EOL;
 
 
 module.exports = function (req, res) {  
-    const apiKey = shortid.generate();
-    const fd = fs.createWriteStream(VALID_KEYS_PATH, {flags:'a'});
-    fd.write(apiKey + LINE_ENDING);
-    fd.end();
-    if(apiKey){
+    try{
+        const apiKey = shortid.generate();
+        const fd = fs.createWriteStream(VALID_KEYS_PATH, {flags:'a'});
+        fd.write(apiKey + LINE_ENDING);
+        fd.end();
         return res.status(201).send({ apiKey });
-
-    }else{
-        return res.status(401);
+    }catch(error){
+        return res.status(404).send({ error:"Something went bad :c /n "+error });
     }
 };
 

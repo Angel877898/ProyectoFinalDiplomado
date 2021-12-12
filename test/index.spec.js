@@ -122,6 +122,7 @@ describe('express_authentication', () => {
 
     it('Should not require auth headers for unprotected routes', done => {
         agent = chai.request.agent(server);
+        agent.set('x-api-key',"");
         Promise
             .mapSeries([
                 agent
