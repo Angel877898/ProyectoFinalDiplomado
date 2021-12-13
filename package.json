@@ -25,9 +25,8 @@
     "mocha-multi-reporters": "1.1.7",
     "morgan": "~1.9.1",
     "shortid": "2.2.15",
-    "sinon": "9.0.0"
-  },
-  "devDependencies": {
+    "sinon": "9.0.0",
     "lodash": "4.17.15"
-  }
+  },
+  "devDependencies": {}
 }
