@@ -25,5 +25,8 @@ app.use('/', indexRouter);
 app.use('/tasks', tasksRouter);
 app.use('/payment', paymentRouter);
 app.use("/shipment",shipmentRouter);
+app.listen(process.env.PORT || 8001, function () {
+    console.log('Running');
+})
 
 module.exports = app;
