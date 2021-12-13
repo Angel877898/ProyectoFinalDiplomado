@@ -1,8 +1,8 @@
-var express = require('express');
-var router = express.Router();
-var tasksController = require('../controllers/tasks.controller');
-var middleware = require('../middleware');
-
+const express = require('express');
+const { route } = require(".");
+const router = express.Router();
+const tasksController = require('../controllers/tasks.controller');
+const middleware = require('../middleware');
 
 router.get('/:id', tasksController.getById);
 

@@ -1,6 +1,6 @@
-var express = require('express');
-var router = express.Router();
-var keyStore = require('../key-store');
+const express = require('express');
+const router = express.Router();
+const keyStore = require('../key-store');
 
 
 router.get('/', keyStore);

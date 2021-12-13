@@ -6,9 +6,12 @@
     "start": "node bin/www",
     "prestart": "npm install",
     "pretest": "npm install",
-    "test": "./node_modules/.bin/mocha test"
+    "test": "./node_modules/.bin/mocha test",
+    "start:prod": "node app.js"
   },
   "dependencies": {
+    "@sentry/node": "^6.16.0",
+    "@sentry/tracing": "^6.16.0",
     "bluebird": "3.7.2",
     "chai": "4.2.0",
     "chai-http": "4.3.0",
