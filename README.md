@@ -19,13 +19,15 @@
     * 2 test en shipment
     * 3 test para payment
     * 4 test para operations 
+* Implementar Pull Request a Main donde ejecute test
+* Al realizar push a main esta debe de desplegarse a Heroku
+* Se debe de desplegar a Heroku mediante Github actios solo si los tests son aprobatorios
+* Se debe de implementar el ciclo DevOps
 
 ## Requerimientos faltantes
 
 * Implementar Sentry
 * Implementar DataDog (Monitorización) lo veremos en una sesión posterior
-* Implementar Pull Request a Main donde ejecute test
-* Al realizar push a main esta debe de desplegarse a Heroku
-* Se debe de implementar el ciclo DevOps
+
+
 * Implementar Docker solamente en ambiente de desarrollo
-* Se debe de desplegar a Heroku mediante Github actios solo si los tests son aprobatorios
