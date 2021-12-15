@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="2.0740" tests="10" failures="0">
-  <testsuite name="Root Suite" timestamp="2021-12-12T01:08:45" tests="0" time="0.0000" failures="0">
+<testsuites name="Mocha Tests" time="2.0870" tests="10" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-12-15T20:46:10" tests="0" time="0.0000" failures="0">
   </testsuite>
-  <testsuite name="express_authentication" timestamp="2021-12-12T01:08:45" tests="7" file="F:\Repos\proyect\test\index.spec.js" time="1.0560" failures="0">
-    <testcase name="express_authentication Should generate an API key and add it to file" time="0.5060" classname="Should generate an API key and add it to file">
+  <testsuite name="express_authentication" timestamp="2021-12-15T20:46:10" tests="7" file="F:\Repos\proyect\test\index.spec.js" time="1.0650" failures="0">
+    <testcase name="express_authentication Should generate an API key and add it to file" time="0.5020" classname="Should generate an API key and add it to file">
     </testcase>
-    <testcase name="express_authentication Should generate 5 unique API Keys" time="0.5070" classname="Should generate 5 unique API Keys">
+    <testcase name="express_authentication Should generate 5 unique API Keys" time="0.5080" classname="Should generate 5 unique API Keys">
     </testcase>
-    <testcase name="express_authentication Should return the API Key back in response" time="0.0180" classname="Should return the API Key back in response">
+    <testcase name="express_authentication Should return the API Key back in response" time="0.0230" classname="Should return the API Key back in response">
     </testcase>
     <testcase name="express_authentication Should send a 401 if the x-api-key header is not present" time="0.0050" classname="Should send a 401 if the x-api-key header is not present">
     </testcase>
-    <testcase name="express_authentication Should send a 401 if the x-api-key is invalid" time="0.0030" classname="Should send a 401 if the x-api-key is invalid">
+    <testcase name="express_authentication Should send a 401 if the x-api-key is invalid" time="0.0040" classname="Should send a 401 if the x-api-key is invalid">
     </testcase>
-    <testcase name="express_authentication Should validate header for protected routes" time="0.0100" classname="Should validate header for protected routes">
+    <testcase name="express_authentication Should validate header for protected routes" time="0.0140" classname="Should validate header for protected routes">
     </testcase>
-    <testcase name="express_authentication Should not require auth headers for unprotected routes" time="0.0070" classname="Should not require auth headers for unprotected routes">
+    <testcase name="express_authentication Should not require auth headers for unprotected routes" time="0.0090" classname="Should not require auth headers for unprotected routes">
     </testcase>
   </testsuite>
-  <testsuite name="payment check" timestamp="2021-12-12T01:08:46" tests="3" file="F:\Repos\proyect\test\payment.spec.js" time="1.0180" failures="0">
-    <testcase name="payment check Should generate an random price" time="0.5060" classname="Should generate an random price">
+  <testsuite name="payment check" timestamp="2021-12-15T20:46:11" tests="3" file="F:\Repos\proyect\test\payment.spec.js" time="1.0220" failures="0">
+    <testcase name="payment check Should generate an random price" time="0.5090" classname="Should generate an random price">
     </testcase>
     <testcase name="payment check Should generate 5 random prices" time="0.5100" classname="Should generate 5 random prices">
     </testcase>
-    <testcase name="payment check Should return 5 promo codes" time="0.0020" classname="Should return 5 promo codes">
+    <testcase name="payment check Should return 5 promo codes" time="0.0030" classname="Should return 5 promo codes">
     </testcase>
   </testsuite>
 </testsuites>
