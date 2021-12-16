@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-dogstatsd.increment('page.views')
+
 Sentry.init({
     dsn: "https://eaf9ee17e687485bacc2117ce5fa58b4@o1059762.ingest.sentry.io/6109070",
     integrations: [
@@ -53,6 +53,7 @@ app.use('/tasks', tasksRouter);
 app.use('/payment', paymentRouter);
 app.use("/operations",operationsRouter);
 app.use("/shipment",shipmentRouter);
+dogstatsd.increment('page.views')
 app.listen(process.env.PORT || 8001, function () {
     console.log('Running');
 })
