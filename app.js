@@ -8,10 +8,12 @@ var tasksRouter = require('./routes/tasks');
 var authRouter = require('./routes/auth');
 var paymentRouter = require('./routes/payment');
 var shipmentRouter = require("./routes/shipment");
+var operationsRouter = require("./routes/operations");
 
 var Sentry = require("@sentry/node");
 var Tracing = require("@sentry/tracing");
-
+var StatsD = require('hot-shots');
+var dogstatsd = new StatsD();
 var app = express();
 
 // view engine setup
@@ -22,7 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+dogstatsd.increment('page.views')
 Sentry.init({
     dsn: "https://eaf9ee17e687485bacc2117ce5fa58b4@o1059762.ingest.sentry.io/6109070",
     integrations: [
@@ -37,6 +39,7 @@ Sentry.init({
     // We recommend adjusting this value in production
     tracesSampleRate: 1.0,
 });
+
 // RequestHandler creates a separate execution context using domains, so that every
 // transaction/span/breadcrumb is attached to its own Hub instance
 app.use(Sentry.Handlers.requestHandler());
@@ -48,6 +51,7 @@ app.use('/auth', authRouter);
 app.use('/', indexRouter);
 app.use('/tasks', tasksRouter);
 app.use('/payment', paymentRouter);
+app.use("/operations",operationsRouter);
 app.use("/shipment",shipmentRouter);
 app.listen(process.env.PORT || 8001, function () {
     console.log('Running');

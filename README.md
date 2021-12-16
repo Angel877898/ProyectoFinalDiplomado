@@ -23,11 +23,9 @@
 * Al realizar push a main esta debe de desplegarse a Heroku
 * Se debe de desplegar a Heroku mediante Github actios solo si los tests son aprobatorios
 * Se debe de implementar el ciclo DevOps
+* Implementar Sentry
+* Implementar Docker solamente en ambiente de desarrollo
 
 ## Requerimientos faltantes
 
-* Implementar Sentry
 * Implementar DataDog (Monitorización) lo veremos en una sesión posterior
-
-
-* Implementar Docker solamente en ambiente de desarrollo
