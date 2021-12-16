@@ -1,0 +1,37 @@
+version: '3'
+services:
+  app:
+    container_name: proyect
+    image: proyect/app
+    networks:
+      - base
+    environment:
+      - NODE_ENV=development
+      - URL_BASE=http://proyect:3000
+      - ENVIROMENT=development 
+      - PRISMA_SECRET=secret123
+      - APP_SECRET=secret123
+    build:
+      context: Dockerfile
+    ports:
+      - 3000:3002
+    volumes:
+      - app:/var/lib/app
+  datadog:
+    build: .
+    links:
+     - app
+    environment:
+     - DD_API_KEY=1930accc9f5a56dd71208159d9b02b07
+    volumes:
+     - /var/run/docker.sock:/var/run/docker.sock
+     - /proc/:/host/proc/:ro
+     - /sys/fs/cgroup:/host/sys/fs/cgroup:ro
+
+networks:
+  base:
+    driver: bridge
+
+
+volumes:
+  app:
